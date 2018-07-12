@@ -15,7 +15,7 @@
 
 #1
 
-    perfect_10_ingredients = {
+    perfect_10_recipe = {
       :almond_flour => "2 cups",
       :gluten_freewhole_oats => "1 cup",
       :kosher_salt => "1/2 tea spoon",
@@ -32,7 +32,6 @@
 
 def recipe_ingredients(perfect_10_recipe)
 	perfect_10_recipe
-
 end
 
 #3:
@@ -51,8 +50,8 @@ def ingredients_and_amounts(perfect_10_recipe)
   perfect_10_recipe.each do |key, value|
     puts "#{key} #{value}"
   end
-
 end
+
 
 
 #5:
@@ -60,16 +59,17 @@ def ingredients(perfect_10_recipe)
   #you'll need to include your whole hash in this method
   #code your solution here
 
-  perfect_10_recipe.each_key { |key| puts key }
+  perfect_10_recipe.each do |x,y|  
+    puts "#{x}"
 end
-
+end 
 #6:
 def amounts(perfect_10_recipe)
   #you'll need to include your whole hash in this method
   #code your solution here
 
-  perfect_10_recipe.each_value do |value|
-    puts value
+  perfect_10_recipe.each do |x,y|
+    puts "#{y}"
   end
 end
 
@@ -78,5 +78,5 @@ def number_ingredients(perfect_10_recipe)
   #you'll need to include your whole hash in this method
   #code your solution here
 
-  perfect_10_recipe.length
+  perfect_10_recipe.size
 end
